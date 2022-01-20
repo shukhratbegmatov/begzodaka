@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Project</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/vendor.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="ico/logo.svg">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <header></header>
+        <section id="section">
+            <div class="site-wrapper">
+                <div class="container">
+                    <div class="game-over">GAME OVER</div>
+                    <div class="time-block">
+                        <div class="you-gat">You gat</div>
+                        <div id="level" class="level"></div>
+                        <div class="timer" id="timer">START</div>
+                    </div>
+                    <div class="error-block">
+                        <p id="inputError" class="input-error">Raqam kiriting brat!</p>
+                    </div>
+                    <div class="block">
+                        <input id="joining1" type="number" class="item"> <span>+</span> 
+                        <input id="joining2" type="number" id="inputNum" class="item"> <span>=</span> 
+                        <input id="answer" onchange="getResult()" type="number" class="item" placeholder="answer" autofocus required autocomplete="off">
+                        <button onclick="getResult()" id="getResult" class="item">OK</button>
+                    </div>
+                    <div class="result-block">
+                        <div class="correct"><span class="ans-item">CORRECT</span>  <span id="correct" class="numberOfCorrect">0</span>
+                        </div>
+                        <div class="incorrect"><span class="ans-item">INCORRECT</span>  <span id="incorrect" class="numberOfIncorrect">0</span>
+                        </div>
+                    </div>
+                    <div class="refresh-block">
+                        <p class="refresh-by-space">Press the space to restart game</p>
+                        <button onclick="refreshGame()" onchange="refreshGame()" id="refresh" class="refresh">Restart game</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/vendor.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
